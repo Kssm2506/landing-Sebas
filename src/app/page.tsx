@@ -70,7 +70,7 @@ export default function Home() {
       </section>
 
       {/* BOOK REVEAL — sección 3 */}
-      <BookReveal src="/book-cover.png" />
+      <BookReveal src="/book.webp" />
 
       {/* PALABRAS DEL AUTOR — sección 4 (justo después del libro) */}
       <section id="palabras-autor">
@@ -291,46 +291,6 @@ export default function Home() {
           <div style={{ textAlign: 'center', marginTop: 40 }}>
             <a href={BUY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
               Quiero leer el resto — $10.00
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section id="testimonials" style={{ padding: '100px 24px', background: 'var(--black)', textAlign: 'center' }}>
-        <div className="container">
-          <p className="section-label">Lo que dicen quienes lo leyeron</p>
-          <h2 className="section-title">Reseñas reales</h2>
-          <div className="divider" />
-          <div className="testi-grid">
-            {[
-              {
-                text: '"No es un libro que lees. Es un libro que te golpea. Después de leerlo tomé decisiones que llevaba meses postergando."',
-                author: 'Carlos M.',
-                role: 'Emprendedor, Guatemala',
-              },
-              {
-                text: '"Por fin alguien que dice la verdad sin endulzarla. Cada capítulo es como una llamada de atención que necesitaba hace años."',
-                author: 'Valeria R.',
-                role: 'Directora de marketing, México',
-              },
-              {
-                text: '"Lo leí en una sentada. Sebastián no te vende sueños — te da herramientas. Eso es exactamente lo que necesitaba."',
-                author: 'Andrés V.',
-                role: 'Fundador de startup, Colombia',
-              },
-            ].map((t) => (
-              <div className="testi-card" key={t.author}>
-                <div className="testi-stars">★★★★★</div>
-                <p className="testi-text">{t.text}</p>
-                <p className="testi-author">{t.author}</p>
-                <p className="testi-role">{t.role}</p>
-              </div>
-            ))}
-          </div>
-          <div style={{ textAlign: 'center', marginTop: 52 }}>
-            <a href={BUY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
-              Unirme a quienes ya lo leyeron — $10.00
             </a>
           </div>
         </div>
