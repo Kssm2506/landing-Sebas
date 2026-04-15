@@ -257,7 +257,7 @@ section { position: relative; }
 .book-scroll-wrap {
   position: relative;
   width: 100%;
-  max-width: 560px;
+  max-width: 1120px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -265,7 +265,7 @@ section { position: relative; }
 
 .book-scroll-img {
   width: 100%;
-  max-width: 480px;
+  max-width: 1040px;
   height: auto;
   display: block;
   transform: translateX(140%);
@@ -289,6 +289,8 @@ section { position: relative; }
 /* Mobile: use vertical slide to avoid horizontal clipping */
 @media (max-width: 768px) {
   .book-scroll-img {
+    width: 156vw;
+    max-width: none;
     transform: translateY(60px);
   }
   .book-scroll-img.visible {
@@ -984,6 +986,7 @@ footer p {
   }
 
   .book-scroll-img {
-    max-width: 300px;
+    width: 156vw;
+    max-width: none;
   }
 }
