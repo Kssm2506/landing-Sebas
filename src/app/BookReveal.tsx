@@ -3,38 +3,40 @@
 import { useEffect, useRef } from 'react'
 
 export default function BookReveal({ src }: { src: string }) {
+  const sectionRef = useRef<HTMLElement>(null)
   const imgRef = useRef<HTMLImageElement>(null)
 
   useEffect(() => {
-    const el = imgRef.current
-    if (!el) return
+    const section = sectionRef.current
+    const img = imgRef.current
+    if (!section || !img) return
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.remove('hidden-left')
-          el.classList.add('visible')
+          img.classList.remove('hidden-left')
+          img.classList.add('visible')
         } else {
           if (entry.boundingClientRect.top > 0) {
             // scrolling back up — reset to right
-            el.classList.remove('visible')
-            el.classList.remove('hidden-left')
+            img.classList.remove('visible')
+            img.classList.remove('hidden-left')
           } else {
             // scrolled past
-            el.classList.remove('visible')
-            el.classList.add('hidden-left')
+            img.classList.remove('visible')
+            img.classList.add('hidden-left')
           }
         }
       },
       { threshold: 0.1 }
     )
 
-    observer.observe(el)
+    observer.observe(section)
     return () => observer.disconnect()
   }, [])
 
   return (
-    <section id="book-reveal">
+    <section id="book-reveal" ref={sectionRef}>
       <div className="book-scroll-wrap">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
