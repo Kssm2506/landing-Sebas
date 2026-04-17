@@ -990,3 +990,102 @@ footer p {
     max-width: none;
   }
 }
+
+/* --- PODCAST --- */
+#podcast {
+  padding: 120px 24px;
+  background: var(--black);
+  text-align: center;
+  border-top: 1px solid #1a1a1a;
+  position: relative;
+}
+
+.podcast-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 9vw, 84px);
+  line-height: 0.9;
+  color: var(--white);
+  margin-bottom: 48px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.podcast-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+
+.podcast-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  background: var(--card);
+  border: 1px solid #222;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+}
+
+.podcast-link.youtube {
+  color: #FF0000;
+}
+
+.podcast-link.spotify {
+  color: #1DB954;
+}
+
+.podcast-link svg {
+  width: 80px;
+  height: 80px;
+  fill: currentColor;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.podcast-link::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: currentColor;
+  z-index: -1;
+  opacity: 0.1;
+  transition: opacity 0.4s ease;
+}
+
+.podcast-link:hover {
+  background: var(--black);
+  transform: translateY(-15px) scale(1.08);
+  border-color: currentColor;
+  box-shadow: 0 15px 40px -10px currentColor;
+}
+
+.podcast-link:hover::before {
+  opacity: 0.2;
+}
+
+.podcast-link:hover svg {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 15px currentColor);
+}
+
+@media (max-width: 600px) {
+  #podcast {
+    padding: 80px 24px;
+  }
+  .podcast-links {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .podcast-link {
+    width: 130px;
+    height: 130px;
+  }
+  .podcast-link svg {
+    width: 60px;
+    height: 60px;
+  }
+}

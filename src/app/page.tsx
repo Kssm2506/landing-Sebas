@@ -72,6 +72,33 @@ export default function Home() {
       {/* BOOK REVEAL — sección 3 */}
       <BookReveal src="/book.webp" />
 
+      {/* PODCAST — sección nueva */}
+      <section id="podcast">
+        <div className="container">
+          <h2 className="podcast-title">Escucha nuestro podcast en grande</h2>
+          <div className="podcast-links">
+            <a 
+              href="https://youtube.com/@chefkrasinski?si=QE7xjTR-zhdxaUba" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="podcast-link youtube" 
+              title="YouTube"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a 
+              href="https://open.spotify.com/show/3bXIzLeTJTMOPtNzupzMaz?si=efEfbM1CTB24NlSPO17MaQ" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="podcast-link spotify" 
+              title="Spotify"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.503 17.306c-.218.358-.684.474-1.041.256-2.861-1.748-6.463-2.143-10.704-1.176-.41.093-.815-.164-.908-.574-.093-.41.164-.815.574-.908 4.646-1.06 8.625-.615 11.823 1.336.357.218.473.684.256 1.041zm1.47-3.262c-.275.446-.856.589-1.302.314-3.275-2.013-8.267-2.597-12.139-1.421-.502.153-1.036-.131-1.189-.633-.153-.502.131-1.036.633-1.189 4.417-1.34 9.919-.687 13.682 1.626.447.275.59.856.315 1.303zm.127-3.39c-3.928-2.333-10.418-2.548-14.192-1.251-.602.183-1.242-.167-1.425-.769-.183-.602.167-1.242.769-1.425 4.318-1.479 11.488-1.233 16 1.446.541.321.718 1.02.397 1.561-.321.541-1.02.718-1.549.388z"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* PALABRAS DEL AUTOR — sección 4 (justo después del libro) */}
       <section id="palabras-autor">
         <div className="palabras-inner">
