@@ -3,12 +3,15 @@ import Countdown from './Countdown'
 import ScrollReveal from './ScrollReveal'
 import BookReveal from './BookReveal'
 import AuthorImage from './AuthorImage'
+import Navbar from './Navbar'
+import Image from 'next/image'
 
 const BUY_URL = 'https://pay.hotmart.com/P105309207S?bid=1775882285033'
 
 export default function Home() {
   return (
     <LenisProvider>
+      <Navbar buyUrl={BUY_URL} />
       {/* HERO */}
       <section id="hero">
         <p className="hero-tag">Sebastián Jara Krasinski · Primer Libro</p>
@@ -417,6 +420,15 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer>
+        <div className="footer-logo-container">
+          <Image 
+            src="/logo.webp" 
+            alt="Logo Sebastián Jara Krasinski" 
+            width={160} 
+            height={80} 
+            className="footer-logo"
+          />
+        </div>
         <p>© 2025 Sebastián Jara Krasinski · Global Corporation Krasinski · Todos los derechos reservados</p>
       </footer>
 
